@@ -1,6 +1,5 @@
 {
   "spirit": {
-    "identifier": "spirit",
     "label": "Spirit",
     "description": "A Spirit is the most common Ghost you will ever come across. However, it is still very powerful and dangerous. They are usually discovered at one of their hunting grounds after an unexplained death.",
     "strength": "Nothing.",
@@ -8,6 +7,7 @@
     "evidence": ["emf", "writing", "box"],
     "secondaryEvidence": [],
     "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
     "hints": [
       "Spirits can often be very active as they don't have much idle time.",
       "When smudged, a spirit will not hunt for at least 180 seconds. Others will hunt in slightly over 90 seconds."
@@ -15,150 +15,335 @@
   },
 
   "wraith": {
-    "identifier": "wraith",
     "label": "Wraith",
     "description": "A wraith is one of the most dangerous Ghosts you will find. It is also the only known Ghost that has the ability of flight and has sometimes been known to travel through walls.",
     "strength": "Wraiths almost never touch the ground, meaning it can't be tracked by footsteps.",
     "weakness": "Wraiths have a toxic reaction to Salt.",
     "evidence": ["emf", "box", "dots"],
+    "secondaryEvidence": [],
     "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
     "hints": [
-      "Wraiths don't leave UV-visible footprints after stepping on salt.",
-      "Wraiths can sporadically teleport to a random player.",
+      "Doesn't leave UV-visible footprints after stepping on salt.",
+      "Can sporadically teleport to a random player.",
       "When teleporting to a player, Wraiths will leave EMF evidence."
     ]
   },
 
   "poltergeist": {
-    "identifier": "poltergeist",
     "label": "Poltergeist",
     "description": "One of the most famous Ghosts, a Polgergeist, also known as a noisy ghost, can manipulate objects around it to spread fear into its victims.",
     "strength": "A Poltergeist can throw huge amounts of objects at once.",
     "weakness": "A Poltergeist is almost ineffective in an empty room.",
     "evidence": ["fingerprints", "box", "writing"],
+    "secondaryEvidence": [],
     "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
     "hints": [
-      "Poltergeists can throw multiple objects at once",
-      "Objects thrown by Poltergeist can drain sanity by 2% per object"
+      "Can throw multiple objects at once.",
+      "Objects thrown by Poltergeists can drain sanity by 2% per object."
     ]
   },
 
   "banshee": {
-    "identifier": "banshee",
     "label": "Banshee",
     "description": "A Banshee is a natural hunter and will attack anything. It has been known to stalk its prey one at a time until making its kill.",
     "strength": "A Banshee will only target one person at a time.",
     "weakness": "Banshees fear the Crucifix and will be less aggressive when near one.",
-    "evidence": ["fingerprints", "orb", "dots"],
+    "evidence": ["fingerprints", "orbs", "dots"],
+    "secondaryEvidence": [],
     "huntingRange": 0.5,
-    "hunting"
+    "huntingRangeNote": "target player's sanity",
+    "hints": [
+      "Targets one player and ignore everyone else if the target player is in the house.",
+      "Emits unique sounds on the parabolic microphone.",
+      "Has higher chance of doing ghost events that involve singing."
+    ]
   },
 
   "demon": {
-    "identifier": "demon",
     "label": "Demon",
     "description": "A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a reason.",
     "strength": "Demons will attack more often than any other Ghost.",
     "weakness": "Asking a Demon successful questions on the Ouija Board won't lower the users sanity.",
-    "evidence": ["fingerprints", "orb", "dots"]
+    "evidence": ["fingerprints", "orbs", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 1,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Can hunt after a hunt in as little as 20 seconds",
+      "Smudge sticks will only prevent it from hunting for 60 seconds (90s for most other ghosts)",
+      "Crucifixes have increased effectiveness (5m/16ft rather than usual 3m/10ft)"
+    ]
   },
 
   "jinn": {
-    "identifier": "jinn",
     "label": "Jinn",
     "description": "A Jinn is a territorial ghost that will attack when threatened. It has also been know to be able to travel at a significant speed.",
     "strength": "A Jinn will travel at a faster speed if its victim is far away.",
     "weakness": "Turning off the location's power source will prevent the Jinn from using its ability",
-    "evidence": ["emf", "fingerprints", "temps"]
+    "evidence": ["emf", "fingerprints", "temps"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Will NEVER turn the power breaker off",
+      "If the power's on, it can use a special ability and drop nearby players' sanities by 25%",
+      "If the power's on, it will move extremely fast at a player during a hunt if it makes eye contact. Will move at normal speed once within 2m (6ft)."
+    ]
   },
 
   "oni": {
-    "identifier": "oni",
     "label": "Oni",
-    "description": "Onis are a cousing to the Demon and possess extreme strength. There have been rumours that they become more active around their prey.",
+    "description": "Onis are a cousin to the Demon and possess extreme strength. There have been rumours that they become more active around their prey.",
     "strength": "Onis are more active when people are nearby and have been seen moving objectives at great speed.",
     "weakness": "Being more active will make the Oni easier to find and identify.",
-    "evidence": ["emf", "temps", "dots"]
+    "evidence": ["emf", "temps", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Becomes more active when players are nearby",
+      "Can throw objects farther away than other ghosts"
+    ]
   },
 
   "phantom": {
-    "identifier": "phantom",
     "label": "Phantom",
     "description": "A Phantom is a Ghost that can possess the living, most commonly summoned by a Ouija Board. It also induces fear into those around it.",
     "strength": "Looking at a Phantom will considerably drop your sanity.",
     "weakness": "Taking a photo of the Phantom will make it temporarily disappear.",
-    "evidence": ["fingerprints", "box", "dots"]
+    "evidence": ["fingerprints", "box", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Disappears if you take a photo of it",
+      "Is invisible for longer periods of times during hunts",
+      "Looking at it will drain more sanity than with other ghosts"
+    ]
   },
 
   "mare": {
-    "identifier": "mare",
     "label": "Mare",
     "description": "A Mare is the source of all nightmares, making it most powerful in the dark.",
     "strength": "A Mare will have an increased chance to attack in the dark.",
     "weakness": "Turning the lights on around the Mare will lower its chance to attack.",
-    "evidence": ["orb", "writing", "box"]
+    "evidence": ["orbs", "writing", "box"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.6,
+    "huntingRangeNote": "team sanity if lights are off",
+    "hints": [
+      "Will NEVER turn lights on",
+      "When a player turns on a light, it has a chance of turning it off immediately"
+    ]
   },
 
   "revenant": {
-    "identifier": "revenant",
     "label": "Revenant",
     "description": "A Revenant is a slow but violent Ghost that will attack indiscriminately. It has been rumoured to travel at a significantly high speed when hunting.",
     "strength": "A Revenant will travel at a significantly faster speed when hunting a victim.",
     "weakness": "Hiding from the Revenant will cause it to move very slowly.",
-    "evidence": ["temps", "orb", "writing"]
+    "evidence": ["temps", "orbs", "writing"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "During hunts, it'll sprint towards players in line of sight",
+      "Moves very slowly when it can't see any players"
+    ]
   },
 
   "shade": {
-    "identifier": "shade",
     "label": "Shade",
     "description": "A Shade is known to be a shy Ghost. There is evidence that a Shade will stop all paranormal activity if there are multiple people nearby.",
     "strength": "Being shy means the Ghost will be harder to find.",
     "weakness": "The ghost will not enter hunting mode if there are multiple people nearby.",
-    "evidence": ["emf", "temps", "writing"]
+    "evidence": ["emf", "temps", "writing"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.35,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "If multiple players are in its room, it won't initiate a hunt",
+      "Interacts less with more than one player nearby",
+      "Has a higher chance of appearing as a shadow figure"
+    ]
   },
 
   "yurei": {
-    "identifier": "yurei",
     "label": "Yurei",
     "description": "A Yurei is a Ghost that has returned to the physical world, usually for the purpose of revenge or hatred.",
     "strength": "Yurei have been known to have a stronger effect on people's Sanity.",
     "weakness": "Smudging the Yurei's room will cause it to not wander around the location for a long time.",
-    "evidence": ["temps", "orb", "dots"]
+    "evidence": ["temps", "orbs", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Smudging it will prevent it from leaving its room for 90 seconds"
+    ]
   },
 
   "hantu": {
-    "identifier": "hantu",
     "label": "Hantu",
     "description": "A Hantu is a rare ghost that can be found in hot climates. They are known to attack often during cold weather.",
     "strength": "Lower temperatures can cause the Hantu to move at faster speeds.",
     "weakness": "A Hantu will move slower in warmer areas.",
-    "evidence": ["orbs", "fingerprints", "temps"]
+    "evidence": ["orbs", "fingerprints", "temps"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Will NEVER turn the power breaker on",
+      "Can move extremely fast in cold temperatures",
+      "Freezing breath can sometimes be seen from the ghost itself"
+    ]
   },
 
   "yokai": {
-    "identifier": "yokai",
     "label": "Yokai",
     "description": "A Yokai is a common type of ghost that is attracted to human voices. They can usually be found haunting family homes.",
     "strength": "Talking near a Yokai will anger it and increase its chance of attacking.",
     "weakness": "When hunting, a Yokai can only hear voices close to it.",
-    "evidence": ["box", "orbs", "dots"]
+    "evidence": ["box", "orbs", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.7,
+    "huntingRangeNote": "if players talk near it",
+    "hints": ["Talking near it can cause greater activity level"]
   },
 
   "goryo": {
-    "identifier": "goryo",
     "label": "Goryo",
     "description": "Using a video camera is the only way to view a Goryo, when it passes through a DOTS projector.",
     "strength": "A Goryo will usually only show itself on camera if there are no people nearby.",
     "weakness": "They are rarely seen far from their place of death.",
-    "evidence": ["emf", "fingerprints", "dots"]
+    "evidence": ["emf", "fingerprints", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Usually roams around less than other ghosts",
+      "DOTS evidence will never be seen through naked eye"
+    ]
   },
 
   "myling": {
-    "identifier": "myling",
     "label": "Myling",
     "description": "A Myling is a very vocal and active ghost. They are rumoured to be quiet when hunting their prey.",
     "strength": "A Myling is known to be quieter when hunting.",
     "weakness": "Mylings more frequently make paranormal sounds.",
-    "evidence": ["emf", "fingerprints", "writing"]
+    "evidence": ["emf", "fingerprints", "writing"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "During hunts, your equipment will flicker before you can hear its footsteps"
+    ]
+  },
+  "onryo": {
+    "label": "Onryo",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["temps", "box", "orbs"],
+    "secondaryEvidence": [],
+    "huntingRange": 1,
+    "huntingRangeNote": "if flame is extinguished near it",
+    "hints": ["Flames can act as a crucifix, but can backfire if extinguished"]
+  },
+  "twins": {
+    "label": "The Twins",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["emf", "temps", "box"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Both ghosts will often interact at the same time in distinct places",
+      "Can use a decoy twin to create interactions while it initiates a hunt from somewhere else"
+    ]
+  },
+  "raiju": {
+    "label": "Raiju",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["emf", "orbs", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.65,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Speeds up whenever electronic equipment is nearby. Can be extremely fast.",
+      "Disrupts electronic devices from farther away when hunting"
+    ]
+  },
+  "obake": {
+    "label": "Obake",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["fingerprints", "emf", "orbs"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.5,
+    "huntingRangeNote": "team sanity",
+    "hints": ["Will sometimes leave a 6-finger fingerprint"]
+  },
+  "mimic": {
+    "label": "The Mimic",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["fingerprints", "temps", "box"],
+    "secondaryEvidence": ["orbs"],
+    "huntingRange": 1,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Can pretend to be any other ghost, including any trait and hunting range"
+    ]
+  },
+  "moroi": {
+    "label": "Moroi",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["box", "writing", "temps"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.45,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Will be faster when players have lower sanity",
+      "Will drain players' sanity faster when it responds through the spirit box"
+    ]
+  },
+  "deogen": {
+    "label": "Deogen",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["box", "writing", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.4,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Heavy breathing can be heard through the spirit box sometimes",
+      "Will always know where you are hiding. Will move extremely fast to you and decelerate when it makes eye contact",
+      "You can run, but you can't hide"
+    ]
+  },
+  "thaye": {
+    "label": "Thaye",
+    "description": "TBD",
+    "strength": "TBD",
+    "weakness": "TBD",
+    "evidence": ["orbs", "writing", "dots"],
+    "secondaryEvidence": [],
+    "huntingRange": 0.75,
+    "huntingRangeNote": "team sanity",
+    "hints": [
+      "Becomes less aggressive and active the longer players spend in its room",
+      "Gets physically slower with the aging"
+    ]
   }
 }
