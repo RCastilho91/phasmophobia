@@ -30,8 +30,6 @@ const evidenceInitialStateBuilder = () => {
 }
 
 
-console.log(evidenceInitialStateBuilder())
-
 module.exports = {
   ghostInitialStateBuilder,
   evidenceInitialStateBuilder,
