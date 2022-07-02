@@ -1,25 +1,31 @@
 {
   "emf": {
+    "id": "emf",
     "label": "EMF Label 5",
     "hint": "Obtained using the EMF meter, when all lights are on except during hunts"
   },
   "temps": {
+    "id": "temps",
     "label": "Freezing Temperatures",
     "hint": "Detected when you can see your own breath, or when using the thermometer and getting temperatures 0C/32F or lower"
   },
   "dots": {
+    "id": "dots",
     "label": "D.O.T.S",
     "hint": "Obtained by seeing a ghost running through the green dots when the DOTS sensor is placed"
   },
   "box": {
+    "id": "box",
     "label": "Spirit Box",
     "hint": "Obtained by asking questions to the radio-looking device in the dark near the ghost"
   },
   "writing": {
+    "id": "writing",
     "label": "Ghost Writing",
     "hint": "Obtained by leaving an open notebook in the ghost room for a while"
   },
   "fingerprints": {
+    "id": "fingerprints",
     "label": "Fingerprints",
     "hint": "Detected when flashing UV light on surfaces such as doors, windows and switches touched by the ghost"
   }
