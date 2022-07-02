@@ -1,7 +1,19 @@
-function updateEvidenceState(currentEvidenceState) {
-  let updatedState = {};
+const getEvidenceProbability = require('../probabilities/getEvidenceProbability');
 
-  // iterate over current evidence, call in probability
+
+function updateEvidenceState(currentEvidenceState, activeGhosts) {
+  let updatedState = {...currentEvidenceState};
+
+  Object.keys(currentEvidenceState).map((evidence) => {
+    updatedState[evidence] = {
+      status: currentEvidenceState[evidence].status,
+      probability: getEvidenceProbability(
+        activeGhosts,
+        evidence,
+        currentEvidenceState[evidence].status,
+      ),
+    };
+  });
 
   return updatedState;
 };

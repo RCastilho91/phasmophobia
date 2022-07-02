@@ -2,22 +2,37 @@ const ghosts = require('../../data/ghosts.json');
 const evidence = require('../../data/evidence.json');
 const possibilities = require('../../../constants/possibilities');
 
+const getEvidenceProbability = require('../probabilities/getEvidenceProbability');
 
-const getInitialState = (type) => {
-  const targetData = type === 'ghosts' ? ghosts : evidence
+const ghostInitialStateBuilder = () => {
   let initialState = {};
 
-  Object.keys(targetData).map((index, properties) => initialState[index] = possibilities.POSSIBLE);
+  Object.keys(ghosts).map((ghost) => initialState[ghost] = possibilities.POSSIBLE);
 
   return initialState
 }
 
-console.log(
-  getInitialState('ghosts')
-)
+const evidenceInitialStateBuilder = () => {
+  let initialState = {};
 
-console.log(
-  getInitialState('evidence')
-)
+  Object.keys(evidence).map((evidence) => {
+    initialState[evidence] = {
+      status: possibilities.POSSIBLE,
+      probability: getEvidenceProbability(
+        Object.keys(ghosts),
+        evidence,
+        possibilities.POSSIBLE
+      ),
+    };
+  });
 
-module.exports = getInitialState;
+  return initialState
+}
+
+
+console.log(evidenceInitialStateBuilder())
+
+module.exports = {
+  ghostInitialStateBuilder,
+  evidenceInitialStateBuilder,
+};
